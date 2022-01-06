@@ -17,13 +17,13 @@ struct TradesCardView: View {
         GeometryReader{ geo in
             ZStack(alignment: .top){
                 Rectangle()
-                    .frame(width: geo.size.width * 0.95, height: 105, alignment: .center)
+                    .frame(width: geo.size.width * 0.95, height: 85, alignment: .center)
                     .foregroundColor(getColor(stuckColor))
                     .border(getColor(stuckColor), width: 2)
                     .cornerRadius(15)
                 
                 Rectangle()
-                    .frame(width: geo.size.width * 0.945, height: 95, alignment: .center)
+                    .frame(width: geo.size.width * 0.945, height: 75, alignment: .center)
                     .foregroundColor(Color.white)
                     .border(Color.white, width: 0)
                     .cornerRadius(15)
@@ -49,9 +49,9 @@ struct TradesCardView: View {
                     }.offset(x: 0, y: -10)
                 }
                 
-            }.frame(maxWidth: .infinity, maxHeight: 105)
+            }.frame(maxWidth: .infinity, maxHeight: 85)
         }
-        .frame(height: 105)
+        .frame(height: 85)
         .onAppear(perform: {
             stuckColor = bindingColor
             bindingColor += 1
